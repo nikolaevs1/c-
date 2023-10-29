@@ -214,4 +214,4 @@ src/Telegram.Bot.Documentation/
 # Rider IDE
 .idea
 
-.csproj
+*.csproj
