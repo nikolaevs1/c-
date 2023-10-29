@@ -5,7 +5,10 @@ public class Answer
     private static double Length(int[] pointA, int[] pointB)
     {
       // Введите свое решение ниже
-
+{
+    double d= Math.Sqrt((Math.Pow(pointA[0] - pointB[0], 2)) + (Math.Pow(pointA[1] - pointB[1], 2))+ (Math.Pow (pointA[2] - pointB[2], 2)));
+    return d;
+}
 
     }
 
