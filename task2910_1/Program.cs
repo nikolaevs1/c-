@@ -6,15 +6,22 @@ Console.Write("Введите число A: ");
 int A = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число B: ");
 int B = Convert.ToInt32(Console.ReadLine());
-int Stepen (int A, int B)
+double Stepen (int A, int B) // double выбран для того, чтобы поддержать работу с отрицательными степенями
 {
-    int step1 = 1;
-    for (int i = 1; i <= B; i++)
+    double step1 = 1;
+    double step;
+    for (int i = 1; i <= Math.Abs(B); i++)
     {
         step1 = step1 * A;
     }
-    return step1;
+    
+    if (B<0)
+        {
+           step = 1 / step1; 
+        }
+        else step = step1;
+    return step;
 }
 
-System.Console.WriteLine($"Расчет через цикл - {A} в степени {B} равно {Stepen(A,B)}");
-System.Console.WriteLine($"Расчет через математическую функцию - {A} в степени {B} равно {Math.Pow (A,B)}");
+System.Console.WriteLine($"Расчет через цикл: {A} в степени {B} равно {Stepen(A,B)}");
+System.Console.WriteLine($"Расчет через математическую функцию: {A} в степени {B} равно {Math.Pow (A,B)}");
